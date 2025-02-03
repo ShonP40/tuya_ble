@@ -147,7 +147,8 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
     ),
     "ms": TuyaBLECategorySensorMapping(
         products={
-            "isljqiq1": [  # Smart Lock
+            ["isljqiq1", "c6hfl8bt"], # Smart Lock
+            [
                 TuyaBLESensorMapping(
                     dp_id=21, # Requires more testing
                     description=SensorEntityDescription(
