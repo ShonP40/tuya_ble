@@ -146,45 +146,47 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
     ),
     "ms": TuyaBLECategorySensorMapping(
         products={
-            ["isljqiq1", "c6hfl8bt"], # Smart Lock
-            [
-                TuyaBLESensorMapping(
-                    dp_id=21, # Requires more testing
-                    description=SensorEntityDescription(
-                        key="alarm_lock",
-                        icon="mdi:alarm-light-outline",
-                        device_class=SensorDeviceClass.ENUM,
-                        options=[
-                            "wrong_finger",
-                            "wrong_password",
-                            "wrong_card",
-                            "low_battery",
-                        ],
+            **dict.fromkeys(
+                ["isljqiq1", "c6hfl8bt"], # Smart Lock
+                [
+                    TuyaBLESensorMapping(
+                        dp_id=21, # Requires more testing
+                        description=SensorEntityDescription(
+                            key="alarm_lock",
+                            icon="mdi:alarm-light-outline",
+                            device_class=SensorDeviceClass.ENUM,
+                            options=[
+                                "wrong_finger",
+                                "wrong_password",
+                                "wrong_card",
+                                "low_battery",
+                            ],
+                        ),
                     ),
-                ),
-#                TuyaBLESensorMapping(
-#                    dp_id=12, # Retrieve last fingerprint used
-#                    description=SensorEntityDescription(
-#                        key="unlock_fingerprint",
-#                        icon="mdi:fingerprint",
-#                    ),
-#                ),
-#                TuyaBLESensorMapping(
-#                    dp_id=15, # Retrieve last card used
-#                    description=SensorEntityDescription(
-#                        key="unlock_card",
-#                        icon="mdi:nfc-variant",
-#                    ),
-#                ),
-#                TuyaBLESensorMapping(
-#                    dp_id=13, # Retrieve last code used
-#                    description=SensorEntityDescription(
-#                        key="unlock_password",
-#                        icon="mdi:keyboard-outline",
-#                    ),
-#                ),
-                TuyaBLEBatteryMapping(dp_id=9),
-            ],
+    #                TuyaBLESensorMapping(
+    #                    dp_id=12, # Retrieve last fingerprint used
+    #                    description=SensorEntityDescription(
+    #                        key="unlock_fingerprint",
+    #                        icon="mdi:fingerprint",
+    #                    ),
+    #                ),
+    #                TuyaBLESensorMapping(
+    #                    dp_id=15, # Retrieve last card used
+    #                    description=SensorEntityDescription(
+    #                        key="unlock_card",
+    #                        icon="mdi:nfc-variant",
+    #                    ),
+    #                ),
+    #                TuyaBLESensorMapping(
+    #                    dp_id=13, # Retrieve last code used
+    #                    description=SensorEntityDescription(
+    #                        key="unlock_password",
+    #                        icon="mdi:keyboard-outline",
+    #                    ),
+    #                ),
+                    TuyaBLEBatteryMapping(dp_id=9),
+                ],
+            ),
         }
     ),
     "wsdcg": TuyaBLECategorySensorMapping(
