@@ -196,7 +196,7 @@ class TuyaBLEHoldTimeDescription(NumberEntityDescription):
     icon: str = "mdi:timer"
     native_max_value: float = 10
     native_min_value: float = 0
-    native_unit_of_measurement: str = TIME_SECONDS
+    native_unit_of_measurement: str = UnitOfTime.SECONDS
     native_step: float = 1
     entity_category: EntityCategory = EntityCategory.CONFIG
 
