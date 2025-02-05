@@ -171,6 +171,12 @@ mapping: dict[str, TuyaBLECategorySwitchMapping] = {
                             key="lock_motor_state",
                         ),
                     ),
+                    TuyaBLESwitchMapping(
+                        dp_id=47,
+                        description=SwitchEntityDescription(
+                            key="open_close", # tjea1gbo Smart Lock
+                        ),
+                    ),
                 ]
             ),
         }
